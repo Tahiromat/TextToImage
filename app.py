@@ -6,6 +6,6 @@ translator = Translator()
 
 st.title('Text To Image Application')
 INPUT_TEXT = st.text_input("Type what you want to draw: ")
-# INPUT_TEXT.click()
+INPUT_TEXT.click()
 result = translate_inputtext2eng(translator, INPUT_TEXT)
 st.write(result.text)
