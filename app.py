@@ -1,14 +1,16 @@
-import re
+import click
 import streamlit as st 
 from googletrans import Translator
-from  translate_input_text import translate_inputtext2eng
+# from  translate_input_text import translate_inputtext2eng
 
 translator = Translator()
 
+def translate_inputtext2eng(translator, INPUT_TEXT):
+    result = translator.translate(INPUT_TEXT)
+    return result
+
 st.title('Text To Image Application')
 INPUT_TEXT = st.text_input("Type what you want to draw: ")
-result = translator.translate(INPUT_TEXT)
+result = translate_inputtext2eng(translator, INPUT_TEXT)
 
-for i in result.split():
-    result = re.match(r"\bS\w+", i)
-    st.text_area(result.text)
+st.markdown(result.text)
