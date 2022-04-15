@@ -1,4 +1,4 @@
-Click==8.0
+big_sleep==0.9.1
+deep_daze==0.11.1
 googletrans==3.0.0
-streamlit==1.5.1
-torch==1.5.1+cpu
+Click==8.0
